@@ -17,7 +17,7 @@ export function Donut(props) {
       {...props}
       dispose={null}
       scale={(12, 12, 12)}
-      position={(0, 0, 0)}
+      position={(5, 0, 0)}
       rotation={[Math.PI / 4, 0, 0]}
     >
       <mesh
