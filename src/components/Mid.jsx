@@ -7,7 +7,7 @@ const Mid = () => {
         <div className="h-screen w-full flex bg-green-300 justify-center items-center flex-col">
           <div className="w-10/12  flex flex-col items-end  gap-8">
             <h2 className="font-bold text-7xl ">
-              Abs are Cool. <br />
+              Donuts are Cool. <br />
               <span className="text-5xl text-gray-700">
                 But have you ever tried donuts?
               </span>
