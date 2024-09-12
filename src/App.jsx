@@ -10,11 +10,13 @@ const App = () => {
   return (
     <>
       <div className="h-screen absolute top-0 w-full">
+        <div className="fixed h-screen w-full">
         <Canvas shadows>
           <ambientLight intensity={2} />
           {/* <OrbitControls /> */}
           <Donut />
         </Canvas>
+        </div>
       </div>
       <Header />
       <Mid />

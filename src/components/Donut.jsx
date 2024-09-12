@@ -8,7 +8,7 @@ export function Donut(props) {
 
   useFrame(() => {
     if (donutRef.current) {
-      donutRef.current.rotation.y += 0.001; // Rotate around the Y axis
+      donutRef.current.rotation.y += 0.002; // Rotate around the Y axis
     }
   });
   return (
