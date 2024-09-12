@@ -1,14 +1,37 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 export function Donut(props) {
   const { nodes, materials } = useGLTF("/donut.glb");
   const donutRef = useRef();
+  const [scrollY, setScrollY] = useState(0);
+
+  // Listen to scroll events
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useFrame(() => {
     if (donutRef.current) {
-      donutRef.current.rotation.y += 0.002; // Rotate around the Y axis
+      // Define a range and map scroll to position
+      const scrollRange = 900; // Total scroll range to map
+      const startPosition = 3; // Initial X position
+      const endPosition = -1; // Final X position
+
+      // Interpolating the scrollY to move between startPosition and endPosition
+      const mappedPosition =
+        (scrollY / scrollRange) * (endPosition - startPosition) + startPosition;
+
+      // Update the position of the donut based on sc roll
+      donutRef.current.position.x = mappedPosition;
+
+      donutRef.current.rotation.y += 0.01; // Rotate around the Y axis
     }
   });
   return (
@@ -17,8 +40,8 @@ export function Donut(props) {
       {...props}
       dispose={null}
       scale={(12, 12, 12)}
-      position={(5, 0, 0)}
-      rotation={[Math.PI / 4, 0, 0]}
+      position={(3, 0, 0)}
+      rotation={[Math.PI / 3, 0, 0]}
     >
       <mesh
         geometry={nodes.Object_4.geometry}
