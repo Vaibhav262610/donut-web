@@ -9,7 +9,7 @@ const Mid = () => {
             <h2 className="font-bold text-7xl ">
               Donuts are Cool. <br />
               <span className="text-5xl text-gray-700">
-                But have you ever tried donuts?
+                Try it you'll like it for sure !!
               </span>
             </h2>
             <p className="w-6/12 text-sm text-gray-500 ">

@@ -11,8 +11,8 @@ const Header = () => {
               <span className="text-5xl text-gray-700">But have you ever tried donuts?</span>
             </h2>
             <p className="w-6/12 text-sm text-gray-500">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
-              quae a ut illo omnis id, optio exercitationem quasi, neque totam
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              quae a ut illo omnis id, optio exercitationem quasi, totam
               amet? Excepturi quibusdam dolorem culpa reiciendis neque
               accusantium veniam possimus! Nesciunt repudiandae odit, deserunt
               vitae dolores modi excepturi officiis reiciendis nostrum! Qui
